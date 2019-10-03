@@ -1,0 +1,28 @@
+@tag
+Feature: Test PhilipsRTC URL Navigation
+  I want to see the WebRTC App getting openend in Browser
+
+  @tag1
+  Scenario: Open PhilipsRTC URL     [90m# demo.feature:6[0m
+    [32mGiven [0m[32mLaunch PhilipsRTC URL[0m     [90m# Demoscreendefinition.LaunchURL()[0m
+    [32mWhen [0m[32mI see the Login Button[0m     [90m# Demoscreendefinition.UserFieldsVisible()[0m
+    [32mThen [0m[32mthe scenario is successful[0m [90m# Demoscreendefinition.JoinButtonVisible()[0m
+
+  @tag2
+  Scenario: Open PhilipsRTC URL                                                      [90m# demo.feature:13[0m
+    [32mGiven [0m[32mLaunch PhilipsRTC URL[0m                                                      [90m# Demoscreendefinition.LaunchURL()[0m
+    [32mAnd [0m[32mI see the Login Button[0m                                                       [90m# Demoscreendefinition.UserFieldsVisible()[0m
+    [32mAnd [0m[32musers makes the changes in settings[0m                                          [90m# Demoscreendefinition.user_makes_the_changes_in_settings()[0m
+    [32mWhen [0m[32muser1 enters username as "[0m[32m[1mTest111[0m[32m" and meetingid as "[0m[32m[1m111111[0m[32m" and meetingkey[0m [90m# Demoscreendefinition.user1_enters_username_as_and_meetingid_as_and_meetingkey(String,String)[0m
+    [32mAnd [0m[32muser2 enters username as "[0m[32m[1mTest222[0m[32m" and meetingid as "[0m[32m[1m111111[0m[32m" and meetingkey[0m  [90m# Demoscreendefinition.user2_enters_username_as_and_meetingid_as_and_meetingkey(String,String)[0m
+    [32mWhen [0m[32muser clicks JoinMeeting[0m                                                     [90m# Demoscreendefinition.user_clicks_JoinMeeting()[0m
+    [32mThen [0m[32muser should be able to login successfully[0m                                   [90m# Demoscreendefinition.user_should_be_able_to_login_successfully()[0m
+@tag
+Feature: Test PhilipsRTC Dummy
+  I want to see the WebRTC App getting openend in Browser parallely
+
+  @tag1
+  Scenario: Open PhilipsRTC URL          [90m# demo2.feature:6[0m
+    [32mGiven [0m[32mLaunch PhilipsRTC URL[0m          [90m# Demoscreendefinition.LaunchURL()[0m
+    [32mWhen [0m[32muser tries to click Join Button[0m [90m# Demoscreendefinition2.ClickJoinButton()[0m
+    [32mThen [0m[32mthe scenario is successful[0m      [90m# Demoscreendefinition.JoinButtonVisible()[0m
